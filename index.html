@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0a0713" />
+<meta name="color-scheme" content="dark" />
+
+<title>Contactless Chemistry in an Acoustic Levitator</title>
+<meta name="description" content="An interactive walkthrough of droplet handling, mixing and liquid–liquid extraction inside an acoustic levitator — no vessel, no walls, no contact." />
+<meta property="og:title" content="Contactless Chemistry in an Acoustic Levitator" />
+<meta property="og:description" content="An interactive walkthrough of droplet handling, mixing and liquid–liquid extraction inside an acoustic levitator." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/meta/social-preview.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="assets/meta/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+<link rel="preload" as="image" href="assets/states/off.png" />
+<link rel="preload" as="image" href="assets/states/idle.png" />
+</head>
+
+<body>
+<a class="skip-link" href="#levitation">Skip to the interactive workflow</a>
+
+<div class="aurora" aria-hidden="true">
+  <span class="aurora__blob aurora__blob--1"></span>
+  <span class="aurora__blob aurora__blob--2"></span>
+  <span class="aurora__blob aurora__blob--3"></span>
+  <span class="aurora__grid"></span>
+</div>
+
+<header class="site-header" id="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="#top">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__text">
+                <strong>Acoustic Levitation</strong>
+        <small>Poster session</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="primary-nav" aria-label="Sections">
+      <a href="#levitation">Levitation</a>
+      <a href="#poster">Poster</a>
+      <a href="#supporting">Other&nbsp;Materials</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="site-header__end">
+            <a class="pill-btn pill-btn--solid site-header__cta" href="assets/poster/poster.pdf" download>
+        Poster PDF
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+</header>
+
+<main id="top">
+
+    <section class="hero">
+    <div class="hero__copy">
+      <p class="eyebrow">
+                <span class="eyebrow__dot"></span> AFF Poster session &middot; 2026
+      </p>
+
+      <h1 class="hero__title">
+                <span class="grad-text">Lab-in-a-Droplet</span> Acoustic<br /> Levitation 
+      </h1>
+
+      <p class="hero__lede">
+                Acoustic levitation is a promising alternative platform for conventional in-vial workflows.
+        This miniaturization approach offers reduced risk of contamination, less analyte adsorption in trace analysis, reduced sample volumes and adheres to green chemistry principles.
+        Explore the proposed workflow and physical properties below step-by-step. Every step is a schematic animation from the experiment.
+      </p>
+
+      <div class="tag-row">
+                <span class="tag">Acoustic Levitation</span>
+        <span class="tag">Containerless Platform</span>
+        <span class="tag">Sample Preparation</span>
+        <span class="tag">Droplet Handling</span>
+        <span class="tag">Green Chemistry</span>
+        <span class="tag">Bioanalytics</span>
+      </div>
+
+      <div class="hero__actions">
+        <a class="pill-btn pill-btn--solid" href="#levitation">
+          Explore the workflow
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+        <a class="pill-btn pill-btn--ghost" href="#poster">View the poster</a>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="hero__visual-glow" aria-hidden="true"></div>
+      <div class="hero__stage">
+        <div class="hero__frame">
+          <video
+            class="hero__video"
+            src="assets/meta/header-video.mp4"
+            muted
+            playsinline
+            webkit-playsinline
+            loop
+            autoplay
+            preload="auto"
+            disablepictureinpicture
+            aria-label="Contactless merging of two miscible droplets"
+          ></video>
+        </div>
+        <p class="hero__visual-caption">Contactless merging of two miscible droplets</p>
+      </div>
+    </div>
+  </section>
+
+    <section class="section section--highlights" aria-label="Key points">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span> Key points</p>
+    </div>
+    <div class="highlights">
+    
+
+    <article class="highlight">
+      <span class="highlight__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg>
+      </span>
+      <h2><span class="grad-text">No Contact</span></h2>
+      <p>The sample is trapped in mid-air by acoustic radiation pressure, drastically minimizing the risk of contamination, sample adsorption, or unwanted side crystallization.
+        Additionally, no cuvettes or other sample holders are needed for spectroscopy or X-ray diffraction experiments are needed.
+      </p>
+    </article>
+
+    <article class="highlight">
+      <span class="highlight__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 19V4.5"/><path d="M4 19h15.5"/><path d="M7 15.2 17.5 7"/><circle cx="7.6" cy="14.7" r="1.15"/><circle cx="11.2" cy="12" r="1.15"/><circle cx="14.6" cy="9.4" r="1.15"/></svg>
+      </span>
+      <h2><span class="grad-text">Operation Window </span></h2>
+      <p>Acoustic levitation enables sample handling across nano- to microliter volume ranges. Depending on the transducer frequency used, several microliter can be levitated. 
+        Other microvessels such as microreactor chips operate in the pico- to nanoliter range but inherently suffer from direct vessel contact.</p>
+    </article>
+
+    <article class="highlight">
+      <span class="highlight__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9.6 13h4.8"/><path d="M10.3 13 7 19.6a2 2 0 0 0 1.8 2.9h6.4a2 2 0 0 0 1.8-2.9L13.7 13"/><path d="M12 13V9.2"/><circle class="petal" cx="12" cy="6.2" r="1.35"/><circle class="petal" cx="9.9" cy="7.4" r="1.25"/><circle class="petal" cx="14.1" cy="7.4" r="1.25"/><circle class="petal" cx="10.5" cy="4.7" r="1.2"/><circle class="petal" cx="13.5" cy="4.7" r="1.2"/></svg>
+      </span>
+      <h2><span class="grad-text">Green Chemistry & Sampling</span></h2>
+      <p>Due to the reduced volume requirements, smaller amounts of sample, reagents, and solvents are needed. Establishing routine acoustic workflows in clinical chemistry significantly reduces waste production. 
+        Additionally, smaller sample sizes per analysis result in lower blood and tissue collection volumes, reducing patient discomfort.
+      </p>
+    </article>
+    </div>
+  </section>
+
+    <section class="section" id="levitation">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span> Interactive</p>
+      <h2 class="section__title"><span class="grad-text">Levitation</span> workflow</h2>
+      <p class="section__lede">
+        Below are several buttons that sequentially guide you through the <i>in stillo </i>workflow.
+        Follow the <strong>Characteristics</strong> branch to see how the field itself behaves, or
+        <strong>Manipulation</strong> to run a complete extraction workflow.
+      </p>
+    </div>
+
+    <div class="stage-layout" id="levitation-stage">
+      <noscript>
+        <p class="notice">This walkthrough needs JavaScript. The same sequence is described on the poster PDF.</p>
+      </noscript>
+    </div>
+  </section>
+
+    <section class="section" id="poster">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span> The poster</p>
+      <h2 class="section__title"><span class="grad-text">Read it</span> full size</h2>
+      <p class="section__lede">
+        View and download the complete poster from the AFF 2026 fall conference.
+      </p>
+    </div>
+
+    <div class="poster-layout">
+      <figure class="poster-preview" id="poster-preview" data-pdf="assets/poster/poster-preview.pdf">
+        <canvas role="img" aria-label="Preview of the full conference poster"></canvas>
+      </figure>
+
+      <div class="poster-side">
+        <dl class="fact-list">
+                    <div><dt>Title</dt><dd>Lab-in-a-Droplet: Acoustic Levitation for Miniaturized Sample Preparation </dd></div>
+          <div><dt>Session</dt><dd>AFF Poster session &middot; 2026</dd></div>
+          <div><dt>Format</dt><dd>A0 portrait, PDF</dd></div>
+        </dl>
+
+        <div class="poster-side__actions">
+          <a class="pill-btn pill-btn--solid" href="assets/poster/poster.pdf" download>
+            Download PDF
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+          </a>
+          <a class="pill-btn pill-btn--ghost" href="assets/poster/poster.pdf" target="_blank" rel="noopener">
+            Open in new tab
+          </a>
+        </div>
+
+        <p class="poster-side__note" style="text-align: justify; display: block;">
+          You are free to download, share, and adapt this poster and its associated materials under the Creative Commons Attribution 4.0 International (CC BY 4.0) License,
+          provided that you give appropriate credit to the original authors, provide a link to the license, and indicate if changes were made.
+          <br>
+          If you reference the methodologies or data presented in this poster, please cite the original peer-reviewed article:
+          <br>
+          <br>
+          Ratzek, G.; Volmer, D.A.; Lab-in-a-Droplet: Utilizing Acoustic Levitation for Miniaturized Sample Preparation and LC-MS/MS, Exemplified by Measurement of 
+          Vitamin D in Serum. <i>Anal. Chem.</i> <strong>2026</strong>, 98 (30), 22034–22042. <br> DOI: https://doi.org/10.1021/acs.analchem.6c03465
+          <br>
+          <br>
+          This work is funded by the Deutsche Forschungsgemeinschaft <br>(DFG VO 1355/10-1).
+        </p>
+      </div>
+    </div>
+  </section>
+
+    <section class="section" id="supporting">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span> Other materials</p>
+      <h2 class="section__title"><span class="grad-text">Publications</span> &amp; further reading</h2>
+      <p class="section__lede">
+        Direct access to current and upcoming publications.
+      </p>
+    </div>
+
+    <div class="pubs">
+      <article class="pub-entry">
+        <div class="pub-entry__row">
+          <figure class="poster-preview manuscript-preview" id="manuscript-preview">
+                        <a class="manuscript-preview__hit" href="https://doi.org/10.1021/acs.analchem.6c03465" target="_blank" rel="noopener">
+              <span class="manuscript-preview__pages">
+                <img src="assets/manuscript/m_ac6c03465_0008.png" alt="Graphical abstract of the manuscript: sample, levitation, LC-MS/MS" loading="lazy" />
+              </span>
+            </a>
+          </figure>
+
+          <div class="poster-side">
+            <dl class="fact-list">
+                            <div><dt>Title</dt><dd>Lab-in-a-Droplet: Utilizing Acoustic Levitation for Miniaturized Sample Preparation and LC-MS/MS, Exemplified by Measurement of Vitamin D in Serum.</dd></div>
+              <div><dt>Publication</dt><dd>Analytical Chemistry &middot; 2026</dd></div>
+              <div><dt>Format</dt><dd>Open-access, PDF</dd></div>
+            </dl>
+            <div class="poster-side__actions">
+              <a class="pill-btn pill-btn--ghost" href="https://doi.org/10.1021/acs.analchem.6c03465" target="_blank" rel="noopener">
+                Open in new tab
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub-entry">
+        <div class="pub-entry__row">
+          <figure class="poster-preview manuscript-preview manuscript-preview--crop" id="upcoming-preview">
+            <div class="manuscript-preview__hit">
+              <span class="manuscript-preview__pages">
+                <img src="assets/manuscript/Upcoming.jpeg" alt="Preview of the forthcoming manuscript" />
+              </span>
+            </div>
+          </figure>
+
+          <div class="poster-side">
+            <dl class="fact-list">
+                            <div><dt>Title</dt><dd>Title of the forthcoming manuscript.</dd></div>
+              <div><dt>Publication</dt><dd>Journal &middot; in preparation</dd></div>
+              <div><dt>Format</dt><dd>Manuscript, PDF</dd></div>
+            </dl>
+            <div class="poster-side__actions">
+              <span class="pill-btn pill-btn--ghost" aria-disabled="true">Coming soon</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <aside class="reading-box">
+        <p class="reading-box__title"><span class="grad-text">Further Reading</span></p>
+        <p>
+          Here you can find recommended publications of our and other groups, which discuss the phenomenon of acoustic levitation, how it can be utilized and the current state of vitamin D research.
+        </p>
+        <p class="reading-box__heading"><span class="grad-text">Acoustic Levitation</span></p>
+        <p class="reading-box__heading"><span class="grad-text">Vitamin D</span></p>
+        <p>
+          Ratzek, G.; Volmer, D.A.; Lab-in-a-Droplet: Utilizing Acoustic Levitation for Miniaturized Sample Preparation and LC-MS/MS, Exemplified by Measurement of Vitamin D in Serum. <i>Anal. Chem.</i> <strong>2026</strong>, 98 (30), 22034–22042.<br>
+          DOI: https://doi.org/10.1021/acs.analchem.6c03465
+        </p>
+        <p>
+          This work is funded by the Deutsche Forschungsgemeinschaft (DFG VO 1355/10-1).
+        </p>
+      </aside>
+    </div>
+
+  </section>
+
+    <section class="section" id="about">
+    <div class="section__head">
+      <p class="eyebrow"><span class="eyebrow__dot"></span> About</p>
+      <h2 class="section__title"><span class="grad-text">Contact </span>us</h2>
+    </div>
+
+    <div class="about-layout">
+      <div class="about-card">
+                <h3 class="about-card__name">Geron Ratzek</h3>
+        <p class="about-card__role">PhD researcher · AK Volmer / Department of Chemistry</p>
+        <p class="about-card__bio">
+          Our group is developing instrumental solutions for metabolomics and lipidomics. Currently we are investigating the metabolism of vitamin D with a strong focus on the clinical assessment of vitamin D levels.
+          <br>
+          Additionally, we are very interested in the integration of acoustic levitation in analytical workflows. Future publications will further develop and integrate acoustic levitation as an alternative sample preparation platform.
+        </p>
+
+        <ul class="about-card__links">
+          <li><a href="mailto:geron.ratzek@hu-berlin.de">geron.ratzek@hu-berlin.de</a></li>
+          <li><a href="https://www.linkedin.com/in/geron-ratzek-009253348/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.volmerlab.de/" target="_blank" rel="noopener">Volmerlab.de</a></li>
+        </ul>
+      </div>
+
+      <div class="about-side">
+        <h3>Acknowledgements</h3>
+        <p>
+                    This work is funded by the Deutsche Forschungsgemeinschaft (DFG VO 1355/10-1).
+          <br>
+          <br>
+          We are very grateful to our group members and colleagues of AK Volmer and Department of chemistry.
+          <br>
+          We are always excited to welcome motivated Bachelor's or Master's students from related or interdisciplinary fields for thesis projects and research collaborations. 
+          <br>
+          Feel free to reach out!
+        </p>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <a class="brand" href="#top">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__text"><strong>Acoustic Levitation</strong><small>HollowPurple</small></span>
+    </a>
+    <nav class="site-footer__nav" aria-label="Footer">
+      <a href="#levitation">Levitation</a>
+      <a href="#poster">Poster</a>
+      <a href="#supporting">Other Materials</a>
+      <a href="#about">About</a>
+    </nav>
+    <p><span class="grad-text"><small>Site & Hosting Disclaimer</small></span></p>
+    <p class="site-footer__meta">
+      The layout and underlying code of this landing page were created with the assistance of AI tools. 
+      All illustrations, animations as well as scientific methodology, data acquisition, and findings presented in the associated publication and poster 
+      are solely the original work of the authors.
+      <br>
+      This website is hosted on GibHub Pages. The authors do not control the platform infrastructure and accept no liability for site downtime, service outages,
+      or hosting-related technical issues. By visting the page, connection data (such as IP addresses) is processed by GitHub as described in their Privacy Statement.
+      <br>
+      <span class="grad-text"><small>Version 2.3 - 09/2026</small></span>
+    </p>
+  </div>
+</footer>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

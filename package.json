@@ -1,0 +1,17 @@
+{
+  "name": "poster-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive poster landing page for the acoustic levitation workflow",
+  "type": "module",
+  "scripts": {
+    "serve": "npx --yes http-server . -p 8099 -c-1",
+    "build:assets": "node tools/build-assets.mjs",
+    "verify:assets": "node tools/verify-assets.mjs"
+  },
+  "devDependencies": {
+    "ffmpeg-static": "^5.3.0",
+    "ffprobe-static": "^3.1.0",
+    "pdfjs-dist": "^4.10.38"
+  }
+}
